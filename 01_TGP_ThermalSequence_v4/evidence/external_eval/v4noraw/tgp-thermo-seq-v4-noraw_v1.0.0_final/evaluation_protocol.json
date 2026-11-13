@@ -1,0 +1,133 @@
+{
+  "protocol_version": "depth-regression-v1",
+  "checkpoint_path": "model/tgp-thermo-seq-v4-noraw_v1.0.0_final.pth",
+  "checkpoint_sha256": "0c0f23981ec648cdf4658c00a06ee67071b5fa0cc2b5bf01a3c4748c61290c24",
+  "model_id": null,
+  "model_version": null,
+  "training_csv": "data/train/data1/data1.csv",
+  "training_csv_sha256": "5c200d9579d0dab4c0178a405e445459c726398ee421b5edfcf4b623ec9a3815",
+  "external_datasets": [
+    {
+      "name": "sample_4areas",
+      "ground_truth_csv": "data/eval/sample_4areas/gt.csv",
+      "ground_truth_sha256": "072554881c396110f91399e69709936240d9808cc0cf3507590e91907cfe615c",
+      "exact_train_image_duplicates": 0
+    },
+    {
+      "name": "sample_ao",
+      "ground_truth_csv": "data/eval/sample_ao/gt.csv",
+      "ground_truth_sha256": "9fdf554cc8f3e923feb4889fd80acf254ccd38967ad2c4f58a617e4e1d4114da",
+      "exact_train_image_duplicates": 0
+    },
+    {
+      "name": "sample_round",
+      "ground_truth_csv": "data/eval/sample_round/gt.csv",
+      "ground_truth_sha256": "5e3a3be612b1212ef22ff479c1fff50273687c7cbecbbfd986f6d9187503afd2",
+      "exact_train_image_duplicates": 0
+    },
+    {
+      "name": "sample_xiemian",
+      "ground_truth_csv": "data/eval/sample_xiemian/gt.csv",
+      "ground_truth_sha256": "988fcab205a3f1e94b01249cff0c58572a25e47cc353d35f4655f2a68940d8fd",
+      "exact_train_image_duplicates": 0
+    }
+  ],
+  "primary_metric": "mae_per_geometry",
+  "bootstrap": {
+    "tile_size": 8,
+    "repetitions": 2000,
+    "seed": 42
+  },
+  "tolerance_coverage_threshold": 0.08,
+  "baseline_acceptance": "reported separately: delta_mae_ci_high < 0 for constant and weak_ridge",
+  "per_geometry_acceptance": [
+    {
+      "dataset_name": "sample_4areas",
+      "passes_both_preregistered_baselines": false
+    },
+    {
+      "dataset_name": "sample_ao",
+      "passes_both_preregistered_baselines": true
+    },
+    {
+      "dataset_name": "sample_round",
+      "passes_both_preregistered_baselines": false
+    },
+    {
+      "dataset_name": "sample_xiemian",
+      "passes_both_preregistered_baselines": false
+    }
+  ],
+  "historical_test_contamination": true,
+  "claim_scope": "locked retrospective baseline; not a pristine first-look blind test",
+  "baseline_metadata": [
+    {
+      "dataset_name": "sample_4areas",
+      "constant_value": 0.88,
+      "ridge_alpha": 1.0,
+      "feature_names": [
+        "mean",
+        "std",
+        "p05",
+        "p25",
+        "p50",
+        "p75",
+        "p95",
+        "gradient_mean",
+        "gradient_std"
+      ],
+      "train_sample_size": 1773
+    },
+    {
+      "dataset_name": "sample_ao",
+      "constant_value": 0.88,
+      "ridge_alpha": 1.0,
+      "feature_names": [
+        "mean",
+        "std",
+        "p05",
+        "p25",
+        "p50",
+        "p75",
+        "p95",
+        "gradient_mean",
+        "gradient_std"
+      ],
+      "train_sample_size": 1773
+    },
+    {
+      "dataset_name": "sample_round",
+      "constant_value": 0.88,
+      "ridge_alpha": 1.0,
+      "feature_names": [
+        "mean",
+        "std",
+        "p05",
+        "p25",
+        "p50",
+        "p75",
+        "p95",
+        "gradient_mean",
+        "gradient_std"
+      ],
+      "train_sample_size": 1773
+    },
+    {
+      "dataset_name": "sample_xiemian",
+      "constant_value": 0.88,
+      "ridge_alpha": 1.0,
+      "feature_names": [
+        "mean",
+        "std",
+        "p05",
+        "p25",
+        "p50",
+        "p75",
+        "p95",
+        "gradient_mean",
+        "gradient_std"
+      ],
+      "train_sample_size": 1773
+    }
+  ]
+}

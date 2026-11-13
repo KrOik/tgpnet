@@ -1,0 +1,12 @@
+experiment_id: tgp-thermo-seq-v4-noraw
+version: 1.0.0
+status: draft
+branch: main
+baseline: convnext-neck_lr1
+changed_parts: [backbone, config, head, loss]
+entry:
+  overrides:
+    backbone: backbone.py
+    head: head.py
+    loss: loss.py
+  config: config.py

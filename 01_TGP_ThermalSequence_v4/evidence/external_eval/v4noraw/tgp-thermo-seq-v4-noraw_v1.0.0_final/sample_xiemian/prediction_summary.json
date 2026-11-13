@@ -1,0 +1,13 @@
+{
+  "dataset_name": "sample_xiemian",
+  "sample_size": 432,
+  "prediction_mean": 1.065411314368248,
+  "prediction_std": 0.26689681519876984,
+  "prediction_min": 0.572198748588562,
+  "prediction_max": 1.4590270519256592,
+  "prediction_p05": 0.5845935583114624,
+  "prediction_p25": 0.8667769879102707,
+  "prediction_p50": 1.1182246804237366,
+  "prediction_p75": 1.3104814887046814,
+  "prediction_p95": 1.4245635271072388
+}

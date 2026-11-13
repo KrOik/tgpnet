@@ -1,0 +1,17 @@
+{
+  "strategy": "full",
+  "fold": 0,
+  "num_folds": 4,
+  "guard_radius": 0,
+  "seed": 42,
+  "split_seed": 42,
+  "optimization_seed": 99173,
+  "effective_optimization_seed": 99173,
+  "shuffle_train_labels_negative_control": false,
+  "train_sample_size": 1773,
+  "validation_sample_size": 0,
+  "test_sample_size": 0,
+  "external_data_access": false,
+  "generalization_claim": "internal optimization only; external geometry evaluation required",
+  "depth_max": 1.52
+}

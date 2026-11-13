@@ -1,0 +1,365 @@
+{
+  "run_id": "data1-20261005T032524Z-739b4d",
+  "mode": "train",
+  "status": "completed",
+  "started_at": "2026-10-05T03:25:24.353898+00:00",
+  "finished_at": "2026-10-05T03:27:54.618452+00:00",
+  "experiment_id": "tgp-thermo-seq-v4-noraw",
+  "experiment_version": "1.0.0",
+  "seed_identity": {
+    "split_seed": 42,
+    "optimization_seed": 99173,
+    "effective_optimization_seed": 99173
+  },
+  "spec": {
+    "mode": "train",
+    "dataset_name": "data1",
+    "experiment_id": "tgp-thermo-seq-v4-noraw",
+    "checkpoint_path": null,
+    "image_dir": null,
+    "run_id": null,
+    "runtime_overrides": {
+      "num_workers": 3,
+      "optimization_seed": 99173
+    },
+    "split_strategy": "full",
+    "cv_fold": null,
+    "epochs": 8,
+    "shuffle_train_labels": false,
+    "model_overrides": {},
+    "data_overrides": null,
+    "optimization_overrides": {},
+    "resume_state_path": null,
+    "segment_end_epoch": null
+  },
+  "config": {
+    "data": {
+      "csv_path": "data/train/data1/data1.csv",
+      "image_dir": "data/train/data1/images",
+      "filename_column": "Image_Path",
+      "label_column": "Label",
+      "image_size": [
+        1024,
+        1024
+      ],
+      "sr_image_dir": null,
+      "sr_manifest_path": null,
+      "input_mode": "curve",
+      "train_contrast_factor": null,
+      "train_curve_augment": 0.0,
+      "train_curve_time_warp": 0.0,
+      "context_neighbor_count": 0,
+      "context_radius": 8.0,
+      "export_splits": false,
+      "split_output_dir": null,
+      "valid_extensions": [
+        ".png",
+        ".jpg",
+        ".jpeg",
+        ".bmp",
+        ".tiff"
+      ],
+      "shuffle_train_labels": false
+    },
+    "split": {
+      "strategy": "full",
+      "train_ratio": 0.7,
+      "val_ratio": 0.15,
+      "test_ratio": 0.15,
+      "seed": 42,
+      "fold": 0,
+      "num_folds": 4,
+      "guard_radius": 0
+    },
+    "model": {
+      "backbone_name": "tgp_thermo_seq_v2",
+      "head_name": "pqt_rrh",
+      "head_variant": "pqt_rrh",
+      "neck_name": "identity",
+      "calibration_name": "identity",
+      "input_channels": 1,
+      "num_outputs": 1,
+      "pretrained": false,
+      "pretrained_backbone_path": null,
+      "sr_model_name": "edsr_baseline",
+      "sr_scale": 2,
+      "sr_weights_path": null,
+      "sr_frozen": true,
+      "hidden_dim": 512,
+      "se_reduction": 16,
+      "multiscale_projection_dim": 128,
+      "sra_encoding": true,
+      "cross_scale_refinement": true,
+      "se_refinement": true,
+      "thermal_scales": [
+        4.0,
+        16.0,
+        64.0
+      ],
+      "thermal_stage_channels": [
+        32,
+        64,
+        128,
+        192
+      ],
+      "thermal_pool_segments": [
+        1,
+        2,
+        4
+      ],
+      "thermal_embed_dim": 256,
+      "thermal_multiscale_encoding": true,
+      "thermal_include_raw": false,
+      "thermal_position_features": true,
+      "thermal_context_enabled": true,
+      "thermal_context_dim": 64,
+      "thermal_context_ring_edges": [
+        2.0,
+        4.0,
+        8.0
+      ],
+      "thermal_soft_position": false,
+      "thermal_global_stats": true,
+      "thermal_spectral_bins": 32,
+      "thermal_dropout": 0.1
+    },
+    "optimization": {
+      "epochs": 8,
+      "validation_interval": 1,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "mse_weight": 0.0,
+      "l1_weight": 0.0,
+      "clip_grad": false,
+      "max_grad_norm": 1.0,
+      "scheduler_factor": 0.5,
+      "scheduler_patience": 5,
+      "warmup_epochs": 5,
+      "backbone_lr_multiplier": 1.0,
+      "neck_lr_multiplier": 1.0,
+      "head_lr_multiplier": 1.0,
+      "save_interval": 5,
+      "resume_state_path": null,
+      "segment_end_epoch": null,
+      "loss_name": "huber",
+      "huber_delta": 0.08,
+      "quantile_tau": 0.5,
+      "depth_weight_gamma": 0.0,
+      "depth_max": null,
+      "ordinal_loss_weight": 0.05,
+      "ema_decay": 0.999
+    },
+    "runtime": {
+      "batch_size": 8,
+      "num_workers": 3,
+      "pin_memory": false,
+      "device": "auto",
+      "gpu_id": 0,
+      "deterministic": true,
+      "optimization_seed": 99173,
+      "mixed_precision": false,
+      "gradient_accumulation_steps": 1
+    },
+    "output": {
+      "output_dir": ".",
+      "best_checkpoint_name": "tgp-thermo-seq-v4-noraw_v1.0.0_best.pth",
+      "final_checkpoint_name": "tgp-thermo-seq-v4-noraw_v1.0.0_final.pth",
+      "training_history_name": "training_history.csv",
+      "training_plot_name": "training_plot.png",
+      "evaluation_results_name": "evaluation_results.csv",
+      "evaluation_plot_name": "evaluation_plots.png",
+      "prediction_plot_name": "prediction_scatter.png",
+      "prediction_csv_name": "predictions.csv",
+      "metrics_summary_name": "metrics_summary.txt"
+    },
+    "experiment": {
+      "experiment_id": "tgp-thermo-seq-v4-noraw",
+      "root_dir": "experiments",
+      "validate_branch": false
+    },
+    "best_checkpoint": {
+      "strategy": "train_loss"
+    },
+    "diagnostics": {
+      "enabled": false,
+      "telemetry_enabled": true,
+      "snapshot_interval": 5,
+      "snapshot_first_epoch": true,
+      "batches_per_snapshot": 1,
+      "samples_per_snapshot": 1,
+      "trigger_on_anomaly": true,
+      "checkpoint_path": null,
+      "run_ablations": false,
+      "output_subdir": "observability",
+      "collapse_patience": 2,
+      "near_zero_threshold": 1e-06,
+      "dominance_threshold": 0.9,
+      "effective_count_threshold": 1.5
+    }
+  },
+  "result": {
+    "device": "cuda:0",
+    "history": {
+      "train_loss": [
+        0.013237573399401462,
+        0.0069633446867695195,
+        0.005975827771377422,
+        0.0054573311613608354,
+        0.004500590100858742,
+        0.004165455435983719,
+        0.0037614593180347452,
+        0.0038566312502004074
+      ],
+      "val_loss": [
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN
+      ],
+      "val_mae": [
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN
+      ],
+      "learning_rates": [
+        0.001,
+        0.001,
+        0.001,
+        0.001,
+        0.001,
+        0.001,
+        0.001,
+        0.001
+      ],
+      "prediction_bias": [
+        -0.01025098841637373,
+        -0.020464381203055382,
+        -0.012082396075129509,
+        0.010353447869420052,
+        0.010168836452066898,
+        -0.001021401840262115,
+        0.003814275609329343,
+        0.0012641588691622019
+      ],
+      "val_rmse": [
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN
+      ],
+      "val_bias": [
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN
+      ],
+      "val_depth_class_accuracy": [
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN
+      ],
+      "val_depth_within_one_class": [
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN
+      ],
+      "val_depth_mean_class_distance": [
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN
+      ],
+      "val_mae_shallow": [
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN
+      ],
+      "val_mae_middle": [
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN
+      ],
+      "val_mae_deep": [
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN
+      ],
+      "lr_backbone": [
+        0.001,
+        0.001,
+        0.001,
+        0.001,
+        0.001,
+        0.001,
+        0.001,
+        0.001
+      ],
+      "lr_head": [
+        0.001,
+        0.001,
+        0.001,
+        0.001,
+        0.001,
+        0.001,
+        0.001,
+        0.001
+      ]
+    },
+    "best_checkpoint_metric": "train_loss",
+    "best_metric_value": 0.0037614593180347452,
+    "best_epoch": 7,
+    "experiment_id": "tgp-thermo-seq-v4-noraw",
+    "experiment_version": "1.0.0",
+    "diagnostic_status": "completed",
+    "completed_epochs": 8,
+    "training_complete": true,
+    "best_checkpoint_path": "model/tgp-thermo-seq-v4-noraw_v1.0.0_final.pth",
+    "history_path": "evidence/training/training_history.csv"
+  }
+}

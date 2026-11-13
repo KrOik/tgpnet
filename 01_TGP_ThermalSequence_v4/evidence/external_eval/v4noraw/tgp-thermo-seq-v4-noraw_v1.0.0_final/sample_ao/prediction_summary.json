@@ -1,0 +1,13 @@
+{
+  "dataset_name": "sample_ao",
+  "sample_size": 561,
+  "prediction_mean": 1.0253844727594372,
+  "prediction_std": 0.33593827329906534,
+  "prediction_min": 0.5750086903572083,
+  "prediction_max": 1.4489665031433105,
+  "prediction_p05": 0.5771787762641907,
+  "prediction_p25": 0.7277265191078186,
+  "prediction_p50": 1.0303946733474731,
+  "prediction_p75": 1.3889631032943726,
+  "prediction_p95": 1.4414857625961304
+}

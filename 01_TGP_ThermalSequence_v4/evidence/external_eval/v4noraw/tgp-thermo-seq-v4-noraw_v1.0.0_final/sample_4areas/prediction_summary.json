@@ -1,0 +1,13 @@
+{
+  "dataset_name": "sample_4areas",
+  "sample_size": 1224,
+  "prediction_mean": 0.6884306443282981,
+  "prediction_std": 0.1657544518106531,
+  "prediction_min": 0.42553913593292236,
+  "prediction_max": 1.0447427034378052,
+  "prediction_p05": 0.4292652830481529,
+  "prediction_p25": 0.5871838927268982,
+  "prediction_p50": 0.7409668266773224,
+  "prediction_p75": 0.8448446094989777,
+  "prediction_p95": 0.9001500099897384
+}

@@ -1,0 +1,6 @@
+role,name,relative_path,metadata_file,filename_column,file_count,image_count,size_bytes,tree_sha256
+train,data1,data/train/data1,data1.csv,Image_Path,1774,1773,249309736,4d03b57632b8b8c9d8ad5f74861fd66fbd1f0043dd546d422b895e26454ee820
+eval,sample_4areas,data/eval/sample_4areas,gt.csv,Filename,1225,1224,255108021,9cbbc6aa9bb42bc0318605e4960de2e2b003c940fd8df523951457ef43da3308
+eval,sample_ao,data/eval/sample_ao,gt.csv,Filename,562,561,77711322,66a08d949fcce38636fb8a4736adc6f0d03f4fa29cc4b8e03011c8bab47046b3
+eval,sample_round,data/eval/sample_round,gt.csv,Filename,1794,1793,343481388,7e4b48d3d3283d520b7b0dc1ecc1c4917e01d26349947014b584b7c9f7f0c2f5
+eval,sample_xiemian,data/eval/sample_xiemian,gt.csv,Filename,433,432,63656481,c8a8261c7c155f6127635b4e90fa91e3b51f7726ed0d112706f003d34b75a28d

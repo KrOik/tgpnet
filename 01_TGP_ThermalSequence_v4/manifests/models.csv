@@ -1,0 +1,2 @@
+role,model_id,version,relative_path,size_bytes,sha256
+release,tgp-thermo-seq-v4-noraw,1.0.0,model/tgp-thermo-seq-v4-noraw_v1.0.0_final.pth,9142099,0c0f23981ec648cdf4658c00a06ee67071b5fa0cc2b5bf01a3c4748c61290c24

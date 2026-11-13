@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "training_csv": "data/train/data1/data1.csv",
+  "training_csv_sha256": "5c200d9579d0dab4c0178a405e445459c726398ee421b5edfcf4b623ec9a3815",
+  "sample_count": 1773,
+  "depth_levels": [0.24, 0.40, 0.56, 0.72, 0.88, 1.04, 1.20, 1.36, 1.52],
+  "label_thresholds": [0.32, 0.48, 0.64, 0.80, 0.96, 1.12, 1.28, 1.44],
+  "samples_per_level": [197, 197, 197, 197, 197, 197, 197, 197, 197],
+  "spatial_folds": [
+    {"fold": 0, "train_per_level": [122, 122, 122, 122, 122, 122, 122, 122, 122], "val_per_level": [41, 41, 41, 41, 41, 41, 41, 41, 41]},
+    {"fold": 1, "train_per_level": [113, 113, 113, 113, 113, 113, 113, 113, 113], "val_per_level": [49, 49, 49, 49, 49, 49, 49, 49, 49]},
+    {"fold": 2, "train_per_level": [113, 113, 113, 113, 113, 113, 113, 113, 113], "val_per_level": [49, 49, 49, 49, 49, 49, 49, 49, 49]},
+    {"fold": 3, "train_per_level": [103, 103, 103, 103, 103, 103, 103, 103, 103], "val_per_level": [58, 58, 58, 58, 58, 58, 58, 58, 58]}
+  ],
+  "validation_partition": "Each sample occurs in exactly one validation fold; guard-radius exclusions affect training only.",
+  "selection_policy": "Only data/train spatial folds may select beta, epoch, or formulation."
+}

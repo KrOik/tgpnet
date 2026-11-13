@@ -1,0 +1,13 @@
+{
+  "dataset_name": "sample_round",
+  "sample_size": 1793,
+  "prediction_mean": 0.8661357528559668,
+  "prediction_std": 0.13572726586264364,
+  "prediction_min": 0.42374134063720703,
+  "prediction_max": 1.3151661157608032,
+  "prediction_p05": 0.5885049223899841,
+  "prediction_p25": 0.7746962308883667,
+  "prediction_p50": 0.8918963074684143,
+  "prediction_p75": 0.9084886908531189,
+  "prediction_p95": 1.0457347631454468
+}
